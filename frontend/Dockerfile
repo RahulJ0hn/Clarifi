@@ -24,8 +24,11 @@ COPY --from=builder /app/dist /usr/share/nginx/html
 # Copy nginx configuration
 COPY nginx.conf /etc/nginx/nginx.conf
 
+# Create nginx log directory
+RUN mkdir -p /var/log/nginx
+
 # Expose port
 EXPOSE 80
 
-# Start nginx
+# Start nginx with debugging
 CMD ["nginx", "-g", "daemon off;"] 

@@ -275,6 +275,7 @@ jspm_packages/
 
 # dotenv environment variables file
 .env
+.env.local
 
 # parcel-bundler cache
 .cache

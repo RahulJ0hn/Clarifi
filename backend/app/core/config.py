@@ -28,7 +28,7 @@ class Settings(BaseSettings):
     AWS_MODEL_ID: str = "arn:aws:bedrock:us-east-1:215010039491:inference-profile/us.anthropic.claude-3-7-sonnet-20250219-v1:0"
     
     # CORS Configuration
-    ALLOWED_ORIGINS: str = "http://localhost:3000,http://localhost:3001,http://127.0.0.1:3000,http://127.0.0.1:3001"
+    ALLOWED_ORIGINS: str = "http://localhost:3000,http://localhost:3001,http://127.0.0.1:3000,http://127.0.0.1:3001,https://clarifi-production-535f.up.railway.app"
     
     # Monitoring Configuration
     MONITOR_CHECK_INTERVAL: int = 60  # 1 minute in seconds for testing

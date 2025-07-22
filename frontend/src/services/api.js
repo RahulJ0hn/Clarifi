@@ -1,4 +1,4 @@
-const API_BASE_URL = 'http://localhost:8000/api';
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:8000/api';
 
 class ApiService {
   async getClerkToken() {
@@ -253,7 +253,8 @@ class ApiService {
 
   // Health Check
   async healthCheck() {
-    const response = await fetch('http://localhost:8000/health');
+    const baseUrl = import.meta.env.VITE_API_URL || 'http://localhost:8000';
+    const response = await fetch(`${baseUrl}/health`);
     return response.json();
   }
 }
